@@ -36,14 +36,14 @@ public class Test4 {
         WebElement clickInput = driver.findElement(By.xpath("//*[@id=\"shopify-section-template--15818701078683__main\"]/div[2]/div[2]/ul/li[1]/div/a/figure/img"));
         clickInput.click();
 
+        JavascriptExecutor jss = (JavascriptExecutor) driver;
+        jss.executeScript("window.scrollBy(0,300)", "");
+
         WebElement cantInput = driver.findElement(By.id("product-quantity-select"));
         cantInput.click();
         cantInput.sendKeys(cant);
 
-        JavascriptExecutor jss = (JavascriptExecutor) driver;
-        jss.executeScript("window.scrollBy(0,300)", "");
-
-        WebElement carshopInput = driver.findElement(By.xpath("//*[@id=\"product_form_5064787918986\"]/div[1]/button"));
+        WebElement carshopInput = driver.findElement(By.xpath("//*[@id=\"product_form_5791794823323\"]/div[1]/button"));
         carshopInput.click();
 
         // Agregar un tiempo de espera de 2 segundos
